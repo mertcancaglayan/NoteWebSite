@@ -11,22 +11,22 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
-    min-height: 100vh;
 }
 
 .container {
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
     text-align: center;
     width: 80%;
+    margin: 20px;
 }
 
 .title {
     color: aliceblue;
     width: 100%;
     text-align: center;
+    margin: 30px;
 }
 
 #form {
@@ -36,6 +36,7 @@ body {
     flex-wrap: wrap;
     font-family: inherit;
     font-size: larger;
+    margin: 30px;
 }
 
 
@@ -62,29 +63,45 @@ body {
     cursor: pointer;
 }
 
-.card-container {
+.cards-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    width: 80%;
+    width: 70%;
     overflow-y: auto;
     max-height: 400px;
+    padding: 0 0 30px 0;
 }
 .card {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     border-radius: 0.75rem;
-    cursor: pointer;
     overflow: hidden;
     margin: 20px 10px 0 0;
+    padding: 10px 15px;
     transition: 1s cubic-bezier(0.28, -0.03, 0, 0.99);
     box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
     background-color: aliceblue;
-    width: 50%;
+    width: 60%;
     height: 50px;
+    font-stretch: condensed;
+}
+
+.card p {
+    flex-grow: 3;
+}
+
+.card i {
+    display: none;
+    justify-self: flex-end;
+    align-self: flex-end;
+    margin: 0 5px 5px 0;
+}
+.card i:hover {
+    color: red;
+    cursor: pointer;
 }
 
 .grow {
