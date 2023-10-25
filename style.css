@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #47dbca;
+    background-color: #113f67;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -24,9 +24,8 @@ body {
 
 .title {
     color: aliceblue;
-    width: 100%;
     text-align: center;
-    margin: 30px;
+    margin: 0 0 30px 0;
 }
 
 #form {
@@ -46,21 +45,33 @@ body {
     box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
     font-family: inherit;
     font-size: large;
-    width: 80%;
+    width: 60%;
+    scrollbar-width: none;
+}
+
+#note-text::-webkit-scrollbar {
+    display: none;
 }
 
 .btn {
     background:transparent;
     border: none;
-    color: aliceblue;
-    margin: 0 0 0 6px;
+    color: #e7eaf6;
+    margin: 0 0 0 10px;
+    padding: 15px 6px 15px 6px;
+
 }
 
 .btn:hover {
     background:transparent;
     border: none;
-    color: rgb(6, 39, 68);
     cursor: pointer;
+    background-color: #124e83;
+    border-radius: 30px;
+}
+
+.btn i {
+    margin: 0 7px 0 4px;
 }
 
 .cards-container {
@@ -73,20 +84,31 @@ body {
     overflow-y: auto;
     max-height: 400px;
     padding: 0 0 30px 0;
+    scrollbar-width: none;
+    background-color: #124e83;
+    border: 2px solid;
+    border-radius: 30px;
+
 }
+
+.cards-container::-webkit-scrollbar {
+    display: none;
+}
+
 .card {
     display: flex;
     text-align: center;
     border-radius: 0.75rem;
-    overflow: hidden;
     margin: 20px 10px 0 0;
     padding: 10px 15px;
     transition: 1s cubic-bezier(0.28, -0.03, 0, 0.99);
     box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
-    background-color: aliceblue;
-    width: 60%;
+    background-color: #a2a8d3;
+    width: 50%;
     height: 50px;
     font-stretch: condensed;
+    word-break: break-all;
+    overflow: hidden;
 }
 
 .card p {
@@ -108,7 +130,28 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150px;
+    height: 50px;
     width: 70%;
-    transform: translateZ(50px);
+    transform: translateZ(70px);
+}
+
+#clear-button {
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #124e83;
+    color: #e7eaf6;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+#clear-button:hover {
+    background-color: #113f67;
+    cursor: pointer;
+}
+
+
+@media (max-width : 440px) {
+    .btn {
+        margin: 10px auto;
+    }
 }
